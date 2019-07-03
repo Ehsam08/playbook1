@@ -1,0 +1,9 @@
+---
+- hosts: webservers
+  become: true
+  tasks:
+  - name: Create directory
+    command: touch /tmp/f1_webserver
+  -
+    name: Copy hosts files in tmp files
+    command: cp /etc/hosts /tmp/myhosts
